@@ -1,0 +1,280 @@
+                * {
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+                
+                body {
+                    background-color: rgb(255, 255, 255);
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                }
+                
+                .center {
+                    margin-bottom: 60px;
+                    margin-left: 80px;
+                }
+                
+                img {
+                    padding-top: 40%;
+                    padding-left: 40%;
+                    animation: img;
+                    animation-duration: 5s;
+                    animation-iteration-count: 1;
+                }
+                
+                @keyframes img {
+                    0% {
+                        transform: rotatez(1deg);
+                    }
+                    25% {
+                        transform: rotatez(60deg);
+                    }
+                    50% {
+                        transform: rotatey(360deg) scale(0.5);
+                    }
+                    75% {
+                        transform: rotatey(-190deg);
+                    }
+                    100% {
+                        transform-origin: bottom;
+                    }
+                }
+                
+                .text {
+                    padding-left: 40%;
+                    width: 100%;
+                    font-size: 30px;
+                    font-weight: 900;
+                    color: rgb(0, 0, 0);
+                }
+                
+                .button {
+                    position: relative;
+                    left: 40%;
+                    padding-left: 20%;
+                    font-size: medium;
+                    background-color: rgb(232, 220, 220);
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 30px;
+                    transform-origin: top left;
+                }
+                
+                .button:hover {
+                    transform-origin: top left;
+                    transform: scale(1.3) perspective(100px) rotatey(7deg);
+                    transition: .5s;
+                    background-color: rgb(0, 0, 0);
+                    color: rgb(255, 255, 255);
+                }
+                
+                .button p {
+                    overflow: hidden;
+                    position: relative;
+                    color: black;
+                    top: 7px;
+                    right: 10px;
+                    font-weight: 900;
+                    font-size: 20px;
+                }
+                
+                .button p:hover {
+                    color: white;
+                }
+                
+                .button a {
+                    text-decoration: none;
+                }
+                
+                .shape1 {
+                    width: 100%;
+                    background-color: rgb(0, 0, 0);
+                    height: 100px;
+                    position: absolute;
+                    bottom: 0%;
+                    box-shadow: 0 0 10px rgb(30, 169, 88), 0 0 40px rgb(79, 38, 177), 0 0 60px rgb(53, 37, 191), 0 0 110px rgb(7, 244, 70);
+                    animation: rainbow;
+                    animation-duration: 7s;
+                    animation-iteration-count: infinite;
+                }
+                
+                @keyframes rainbow {
+                    0% {
+                        box-shadow: 0 0 100px rgb(30, 169, 88), 0 0 40px rgb(79, 38, 177), 0 0 60px rgb(53, 37, 191), 0 0 110px rgb(7, 244, 70);
+                    }
+                    25% {
+                        box-shadow: 0 0 100px rgb(152, 45, 136), 0 0 40px rgb(207, 202, 218), 0 0 60px rgb(179, 3, 27), 0 0 110px rgb(7, 182, 213);
+                    }
+                    50% {
+                        box-shadow: 0 0 100px rgb(6, 207, 242), 0 0 40px rgb(83, 16, 237), 0 0 60px rgb(218, 85, 9), 0 0 110px rgb(225, 35, 6);
+                    }
+                    75% {
+                        box-shadow: 0 0 100px rgb(237, 106, 6), 0 0 40px rgb(10, 102, 7), 0 0 60px rgb(205, 13, 195), 0 0 110px rgb(9, 203, 60);
+                    }
+                    100% {
+                        box-shadow: 0 0 100px rgb(239, 9, 185), 0 0 40px rgb(178, 41, 7), 0 0 60px rgb(196, 202, 14), 0 0 110px rgb(35, 36, 35);
+                    }
+                }
+                
+                .ball {
+                    position: relative;
+                    margin-top: 7px;
+                    height: 20px;
+                    background-color: rgb(165, 128, 229);
+                    width: 50px;
+                    border-radius: 10%;
+                    animation: run;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-direction: reverse;
+                    cursor: crosshair;
+                }
+                
+                @keyframes run {
+                    40% {
+                        transform: rotatex(-90deg);
+                        transform: translateX(1300px);
+                    }
+                    50% {
+                        transform: rotatex(-90deg);
+                        background-color: rgb(80, 158, 158);
+                    }
+                    60% {
+                        transform: rotatex(-90deg);
+                        background-color: rgb(195, 158, 216);
+                    }
+                    70% {
+                        background-color: rgb(217, 96, 96);
+                    }
+                    80% {
+                        background-color: rgb(144, 46, 131);
+                    }
+                    100% {
+                        background-color: rgb(119, 225, 100);
+                    }
+                }
+                
+                .ball1 {
+                    position: relative;
+                    margin-top: 10px;
+                    height: 20px;
+                    background-color: rgb(165, 128, 229);
+                    width: 50px;
+                    border-radius: 10%;
+                    animation: run1;
+                    animation-duration: 5s;
+                    animation-direction: inherit;
+                    animation-iteration-count: infinite;
+                    cursor: crosshair;
+                }
+                
+                @keyframes run1 {
+                    40% {
+                        transform: rotatex(-90deg);
+                        transform: translateX(1300px);
+                    }
+                    50% {
+                        transform: rotatex(-90deg);
+                        background-color: rgb(80, 158, 158);
+                    }
+                    60% {
+                        transform: rotatex(-90deg);
+                        background-color: rgb(195, 158, 216);
+                    }
+                    70% {
+                        background-color: rgb(217, 96, 96);
+                    }
+                    80% {
+                        background-color: rgb(144, 46, 131);
+                    }
+                    100% {
+                        background-color: rgb(119, 225, 100);
+                    }
+                }
+                
+                .ball2 {
+                    position: relative;
+                    margin-top: 10px;
+                    height: 20px;
+                    background-color: rgb(165, 128, 229);
+                    width: 50px;
+                    border-radius: 10%;
+                    animation: run2;
+                    animation-duration: 5s;
+                    animation-direction: reverse;
+                    animation-iteration-count: infinite;
+                    cursor: crosshair;
+                }
+                
+                @keyframes run2 {
+                    40% {
+                        transform: rotatex(-90deg);
+                        transform: translateX(1300px);
+                    }
+                    50% {
+                        transform: rotatex(-90deg);
+                        background-color: rgb(80, 158, 158);
+                    }
+                    60% {
+                        transform: rotatex(-90deg);
+                        background-color: rgb(195, 158, 216);
+                    }
+                    70% {
+                        background-color: rgb(217, 96, 96);
+                    }
+                    80% {
+                        background-color: rgb(144, 46, 131);
+                    }
+                    100% {
+                        background-color: rgb(119, 225, 100);
+                    }
+                }
+                
+                .box4 {
+                    position: absolute;
+                    right: 0.1%;
+                    top: 640px;
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(170deg, rgba(204, 151, 160, 0), rgba(62, 48, 61, 0.453));
+                    border-radius: 50%;
+                }
+                
+                .bubble {
+                    position: relative;
+                    display: flex;
+                }
+                
+                .bubble span {
+                    overflow: hidden;
+                    position: relative;
+                    width: 10px;
+                    height: 10px;
+                    background: rgb(181, 127, 186);
+                    margin: 0 4px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 5px rgb(97, 93, 97), 0 0 50px rgb(61, 52, 58), 0 0 100px rgb(36, 25, 36);
+                    animation: bg 15s linear infinite;
+                    animation-duration: calc(300s /var(--i));
+                }
+                
+                .bubble span:nth-child(odd) {
+                    overflow: hidden;
+                    border-radius: 50%;
+                    background: rgb(98, 185, 91);
+                    box-shadow: 0 0 0 5px rgb(97, 93, 97), 0 0 50px rgb(61, 52, 58), 0 0 100px rgb(36, 25, 36);
+                    animation: bg 15s linear infinite;
+                    animation-duration: calc(300s /var(--i));
+                }
+                
+                @keyframes bg {
+                    0% {
+                        transform: translatey(-100vh) scale(0);
+                    }
+                    100% {
+                        transform: translatey(50vh) scale(0.5);
+                    }
+                }
